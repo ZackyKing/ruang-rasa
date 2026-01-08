@@ -76,11 +76,6 @@ Buka dua terminal terpisah untuk menjalankan server backend dan compile frontend
 php artisan serve
 ```
 
-**Terminal 2 (Vite Frontend):**
-```bash
-npm run dev
-```
-
 Buka browser dan akses: `http://localhost:8000`
 
 ---
