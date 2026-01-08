@@ -1,0 +1,283 @@
+/* Enhanced Create Post Card Styling */
+.create-post-card {
+    background: white;
+    border-radius: var(--radius-lg);
+    padding: var(--spacing-lg);
+    margin-bottom: var(--spacing-lg);
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+    border: 1px solid var(--border-color);
+    transition: all 0.3s ease;
+}
+
+.create-post-card:hover {
+    box-shadow: 0 4px 12px rgba(107, 123, 75, 0.1);
+    border-color: #C8D4B8;
+}
+
+.create-post-header {
+    display: flex;
+    gap: var(--spacing-md);
+    margin-bottom: var(--spacing-md);
+}
+
+.create-post-avatar {
+    width: 45px;
+    height: 45px;
+    border-radius: var(--radius-full);
+    background: var(--light-sage);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    flex-shrink: 0;
+}
+
+.create-post-avatar img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+}
+
+.create-post-avatar .avatar-placeholder {
+    font-weight: 600;
+    font-size: 1.1rem;
+    color: var(--text-green);
+}
+
+.create-post-textarea {
+    width: 100%;
+    min-height: 100px;
+    border: 1px solid var(--border-color);
+    border-radius: var(--radius-md);
+    padding: var(--spacing-md);
+    font-size: 0.95rem;
+    font-family: inherit;
+    resize: vertical;
+    transition: all 0.3s ease;
+    background: #FAFBF9;
+}
+
+.create-post-textarea:focus {
+    outline: none;
+    border-color: var(--primary-green);
+    background: white;
+    box-shadow: 0 0 0 3px rgba(107, 123, 75, 0.1);
+}
+
+.create-post-textarea::placeholder {
+    color: var(--text-light);
+}
+
+.create-post-footer {
+    display: flex;
+    align-items: center;
+    gap: var(--spacing-md);
+    margin-top: var(--spacing-md);
+    flex-wrap: wrap;
+}
+
+/* MODERN EXPANDABLE Dropdown - Like Image Reference */
+.create-post-select,
+.post-category-select {
+    position: relative;
+    flex: 1;
+    min-width: 220px;
+}
+
+.create-post-select select,
+.post-category-select select {
+    width: 100%;
+    padding: 14px 45px 14px 18px;
+    border: 2px solid #E5E7EB;
+    border-radius: 12px;
+    font-size: 0.95rem;
+    font-weight: 500;
+    font-family: inherit;
+    color: #374151;
+    background: white;
+    cursor: pointer;
+    transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+    appearance: none;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 14px center;
+    background-size: 20px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.05);
+}
+
+.create-post-select select:hover,
+.post-category-select select:hover {
+    border-color: #D1D5DB;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.08);
+}
+
+.create-post-select select:focus,
+.post-category-select select:focus {
+    outline: none;
+    border-color: #3B82F6;
+    border-top-width: 3px;
+    border-top-color: #3B82F6;
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.15);
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='20' height='20' viewBox='0 0 24 24' fill='none' stroke='%236B7280' stroke-width='2.5' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='18 15 12 9 6 15'%3E%3C/polyline%3E%3C/svg%3E");
+}
+
+/* Dropdown options with gray hover */
+.create-post-select select option,
+.post-category-select select option {
+    padding: 14px 18px;
+    background: white;
+    color: #374151;
+    font-weight: 500;
+}
+
+.create-post-select select option:hover,
+.post-category-select select option:hover {
+    background: #F3F4F6;
+}
+
+.create-post-select select option:checked,
+.post-category-select select option:checked {
+    background: #F3F4F6;
+    font-weight: 600;
+}
+
+.create-post-select select option:first-child,
+.post-category-select select option:first-child {
+    color: #9CA3AF;
+    font-style: normal;
+    font-weight: 400;
+}
+
+/* Checkbox styling */
+.anonymous-checkbox {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    cursor: pointer;
+    user-select: none;
+    padding: 10px 14px;
+    border-radius: var(--radius-sm);
+    transition: all 0.2s ease;
+}
+
+.anonymous-checkbox:hover {
+    background: #F0F4ED;
+}
+
+.anonymous-checkbox input[type="checkbox"] {
+    width: 20px;
+    height: 20px;
+    border: 2px solid var(--border-color);
+    border-radius: 5px;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    appearance: none;
+    -webkit-appearance: none;
+    background: white;
+    position: relative;
+}
+
+.anonymous-checkbox input[type="checkbox"]:checked {
+    background: var(--primary-green);
+    border-color: var(--primary-green);
+}
+
+.anonymous-checkbox input[type="checkbox"]:checked::after {
+    content: '';
+    position: absolute;
+    left: 6px;
+    top: 2px;
+    width: 5px;
+    height: 10px;
+    border: solid white;
+    border-width: 0 2.5px 2.5px 0;
+    transform: rotate(45deg);
+}
+
+.anonymous-checkbox label {
+    font-size: 0.9rem;
+    color: var(--text-medium);
+    cursor: pointer;
+    font-weight: 500;
+}
+
+.anonymous-checkbox input:checked~label {
+    color: var(--primary-green);
+    font-weight: 600;
+}
+
+/* Submit button */
+.create-post-submit,
+.btn-post-submit {
+    padding: 11px 28px;
+    background: var(--primary-green);
+    color: white;
+    border: none;
+    border-radius: var(--radius-md);
+    font-size: 0.95rem;
+    font-weight: 600;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    white-space: nowrap;
+}
+
+.create-post-submit:hover,
+.btn-post-submit:hover {
+    background: var(--primary-green-hover);
+    transform: translateY(-2px);
+    box-shadow: 0 6px 16px rgba(107, 123, 75, 0.35);
+}
+
+.create-post-submit:active,
+.btn-post-submit:active {
+    transform: translateY(0);
+}
+
+.create-post-submit:disabled,
+.btn-post-submit:disabled {
+    background: #B8C5A8;
+    cursor: not-allowed;
+    transform: none;
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+    .create-post-footer {
+        flex-direction: column;
+        align-items: stretch;
+    }
+
+    .create-post-select,
+    .post-category-select {
+        min-width: 100%;
+    }
+
+    .create-post-submit,
+    .btn-post-submit {
+        width: 100%;
+    }
+}
+/* FIX: Checkbox Label Side by Side */
+.anonymous-checkbox,
+.anonymous-label {
+    display: inline-flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    padding: 8px 12px !important;
+}
+
+.anonymous-checkbox input[type="checkbox"],
+.anonymous-label input[type="checkbox"] {
+    flex-shrink: 0 !important;
+    margin: 0 !important;
+}
+
+.anonymous-checkbox span,
+.anonymous-checkbox label,
+.anonymous-label span,
+.anonymous-label label {
+    margin: 0 !important;
+    white-space: nowrap !important;
+}

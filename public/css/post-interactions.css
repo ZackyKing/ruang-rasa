@@ -1,0 +1,192 @@
+/* Interactive Post Action Buttons */
+.post-actions {
+    display: flex;
+    gap: 24px;
+    padding-top: 16px;
+    border-top: 1px solid #E8EDE6;
+}
+
+.post-action-btn {
+    display: flex;
+    align-items: center;
+    gap: 8px;
+    background: none;
+    border: none;
+    padding: 8px 12px;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #5A6A3F;
+    cursor: pointer;
+    transition: all 0.3s ease;
+    position: relative;
+}
+
+.post-action-btn:hover {
+    background: #F0F4ED;
+    transform: translateY(-2px);
+}
+
+.post-action-btn svg {
+    transition: all 0.3s ease;
+}
+
+/* Like Button - Red when active */
+.post-action-btn.like-btn.active {
+    color: #E74C3C;
+}
+
+.post-action-btn.like-btn.active svg {
+    fill: #E74C3C;
+    stroke: #E74C3C;
+}
+
+.post-action-btn.like-btn:hover {
+    color: #E74C3C;
+    background: #FFE8E6;
+}
+
+.post-action-btn.like-btn:hover svg {
+    fill: #E74C3C;
+    stroke: #E74C3C;
+    transform: scale(1.2);
+}
+
+/* Comment Button - Blue on hover */
+.post-action-btn.comment-btn:hover {
+    color: #3498DB;
+    background: #E8F4FD;
+}
+
+.post-action-btn.comment-btn:hover svg {
+    stroke: #3498DB;
+    transform: scale(1.1);
+}
+
+/* Reshare Button - Green when active */
+.post-action-btn.reshare-btn.active {
+    color: #27AE60;
+}
+
+.post-action-btn.reshare-btn.active svg {
+    stroke: #27AE60;
+}
+
+.post-action-btn.reshare-btn:hover {
+    color: #27AE60;
+    background: #E8F8EE;
+}
+
+.post-action-btn.reshare-btn:hover svg {
+    stroke: #27AE60;
+    transform: rotate(90deg) scale(1.1);
+}
+
+/* Save Button - Sage green when active */
+.post-action-btn.save-btn.active {
+    color: #6B7B4B;
+}
+
+.post-action-btn.save-btn.active svg {
+    fill: #6B7B4B;
+    stroke: #6B7B4B;
+}
+
+.post-action-btn.save-btn:hover {
+    color: #6B7B4B;
+    background: #F0F4ED;
+}
+
+.post-action-btn.save-btn:hover svg {
+    fill: #6B7B4B;
+    stroke: #6B7B4B;
+    transform: scale(1.15);
+}
+
+/* Action count styling - always visible */
+.action-count {
+    font-size: 0.9rem;
+    font-weight: 500;
+    color: inherit;
+    margin-left: 6px;
+    transition: all 0.3s ease;
+}
+
+.post-action-btn:hover .action-count {
+    font-weight: 600;
+}
+
+/* Remove old hidden metric styles */
+.hidden-metric {
+    display: none;
+}
+
+.action-label {
+    display: none;
+}
+
+/* Ripple effect on click */
+.post-action-btn:active {
+    transform: scale(0.95);
+}
+
+@keyframes ripple {
+    0% {
+        transform: scale(0);
+        opacity: 1;
+    }
+
+    100% {
+        transform: scale(2);
+        opacity: 0;
+    }
+}
+
+.post-action-btn::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+    background: currentColor;
+    opacity: 0;
+    pointer-events: none;
+}
+
+.post-action-btn:active::after {
+    animation: ripple 0.6s ease-out;
+}
+
+/* Post Author Row with Follow Button */
+.post-author-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.btn-follow-small {
+    padding: 3px 12px;
+    font-size: 11px;
+    border-radius: 12px;
+    border: 1px solid #6B7B4B;
+    background: transparent;
+    color: #6B7B4B;
+    cursor: pointer;
+    transition: all 0.2s ease;
+    white-space: nowrap;
+}
+
+.btn-follow-small:hover {
+    background: #6B7B4B;
+    color: white;
+}
+
+.btn-follow-small.following {
+    background: #6B7B4B;
+    color: white;
+    border-color: #6B7B4B;
+}
+
+.btn-follow-small.following:hover {
+    background: #5a6a3f;
+    border-color: #5a6a3f;
+}
